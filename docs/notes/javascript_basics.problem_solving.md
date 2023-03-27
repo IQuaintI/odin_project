@@ -1,8 +1,8 @@
 ---
 id: 2blxbiqns3r9h02m4id9d5v
-title: Problem Solving
-desc: ""
-updated: 1679676542616
+title: Problem solving
+desc: ''
+updated: 1679875413142
 created: 1679584580444
 ---
 
@@ -99,6 +99,7 @@ console.log(i);
 }
 }
 ```
+It is important to note that *FizzBuzz* is a multiple of both ```3``` and ```5``` so it must be checked first. If it is checked last then it will never be printed as the other conditions will always be true.
 
 ### **6. Otherwise print the current number**
 ```javascript
