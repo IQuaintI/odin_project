@@ -1,8 +1,8 @@
 ---
 id: 2blxbiqns3r9h02m4id9d5v
 title: Problem solving
-desc: ''
-updated: 1679875413142
+desc: 'The problem solving section on the Odin Project in notes'
+updated: 1679875787102
 created: 1679584580444
 ---
 

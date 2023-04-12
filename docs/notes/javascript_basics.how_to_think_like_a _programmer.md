@@ -1,8 +1,8 @@
 ---
 id: 584oe1uztm6s8jpv2lcelzf
 title: How to think like a programmer
-desc: ''
-updated: 1679875434311
+desc: 'A video about how to think like a programmer in notes'
+updated: 1679875766798
 created: 1679683783819
 ---
         Coding is about explaining something complicated to a dumb box.
