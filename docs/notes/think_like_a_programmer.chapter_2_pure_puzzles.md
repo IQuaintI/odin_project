@@ -2,7 +2,7 @@
 id: 5d00h243d2426x4gy2lw90q
 title: Chapter 2 pure puzzles
 desc: 'The chapter 2 follow-along in notes'
-updated: 1681316403475
+updated: 1681444372930
 created: 1679874742535
 ---
 # Half of a square
@@ -1915,6 +1915,82 @@ The number radixes are:
       4. Hexadecimal: 16
 
 So the above code would convert the number `10` from the decimal number system to the binary number system.
+
+# Word Checker
+
+## Introduction
+
+We are going to create a function that tells stats about a sentence.
+
+## Lets break it down
+
+      1. Take the user input. 
+      2. Count the number of words.
+      3. Count the number of characters.
+      4. Count the number of vowels.
+      5. Count the number of consonants.
+      6. Count the number of spaces.
+      7. Count the number of special characters.
+      8. Tell the longest word.
+      9. Tell the shortest word.
+      10. Tell the most used letter.
+      11. Tell the least used letter.
+
+## Let's do this
+
+**First, we need to take the user input.**
+
+```javascript
+let sentence = prompt("Enter a sentence.");
+```
+
+`prompt` is a function that takes a string as a parameter and returns a string.
+
+**Next, we need to count the number of words.**
+
+```javascript
+let sentence = prompt("Enter a sentence.");
+
+let words = sentence.split(" ");
+```
+
+`split` is a function that takes a string as a parameter and returns an array. The `" "` is the separator, meaning that it will split the string at the spaces. The single space in the separator just splits the string into an array of words.
+
+i.e `let words = sentence.split(" ");` will split the string `Hello World` into an array of `["Hello", "World"]`.
+
+If the separator is an empty string, it will split the string into an array of characters.
+
+i.e `let words = sentence.split("");` will split the string `Hello World` into an array of `["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"]`.
+
+**Now we need to count the number of characters.**
+
+```javascript
+let sentence = prompt("Enter a sentence.");
+
+let words = sentence.split(" ");
+
+let characters = sentence.length;
+```
+
+**Now we need to count the number of vowels.**
+
+```javascript
+let sentence = prompt("Enter a sentence.");
+
+let words = sentence.split(" ");
+
+let characters = sentence.length;
+
+let vowels = sentence.match(/[aeiou]/gi).length;
+```
+
+The `match` function takes a regular expression as a parameter and returns an array of matches. 
+
+Regular expressions (or regex) are a way to match patterns in strings.
+
+The `/[aeiou]/gi` is a regular expression that matches all the vowels in the string. 
+
+The `gi` is a flag that makes the regular expression case insensitive.
 
 ## Conclusion
 

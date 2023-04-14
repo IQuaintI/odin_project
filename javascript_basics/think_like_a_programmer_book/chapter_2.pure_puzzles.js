@@ -247,3 +247,18 @@ console.log(decimalToHexadecimal(100));
 console.log(hexadecimalToDecimal(100));
 */
 console.log(numberSystemToNumberSystem(100, 10, 2));
+
+//Word Checker
+
+//let sentence = prompt("Enter a sentence.");
+let sentence = "The quick brown fox jumps over the lazy dog.";
+
+let words = sentence.split(" ");
+
+let characters = sentence.length;
+
+let vowels = sentence.match(/[aeiou]/gi).length;
+
+console.log(words);
+console.log(characters);
+console.log(vowels);
