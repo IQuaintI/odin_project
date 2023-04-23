@@ -251,14 +251,16 @@ console.log(numberSystemToNumberSystem(100, 10, 2));
 //Word Checker
 
 //let sentence = prompt("Enter a sentence.");
-let sentence = "The quick brown fox jumps over the lazy dog.";
+function wordChecker(sentence) {
+  let words = sentence.split(" ");
 
-let words = sentence.split(" ");
+  let characters = sentence.length;
 
-let characters = sentence.length;
+  let vowels = sentence.match(/[aeiou]/gi).length;
 
-let vowels = sentence.match(/[aeiou]/gi).length;
+  let consonants = sentence.match(/[^aeiou\s]/gi).length;
 
-console.log(words);
-console.log(characters);
-console.log(vowels);
+  return `Words: ${words.length}\nCharacters: ${characters}\nVowels: ${vowels}\nConsonants: ${consonants}`;
+}
+
+console.log(wordChecker("Hello World"));

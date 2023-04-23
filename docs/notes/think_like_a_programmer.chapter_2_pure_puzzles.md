@@ -2,7 +2,7 @@
 id: 5d00h243d2426x4gy2lw90q
 title: Chapter 2 pure puzzles
 desc: 'The chapter 2 follow-along in notes'
-updated: 1681444372930
+updated: 1682280988833
 created: 1679874742535
 ---
 # Half of a square
@@ -1991,6 +1991,61 @@ Regular expressions (or regex) are a way to match patterns in strings.
 The `/[aeiou]/gi` is a regular expression that matches all the vowels in the string. 
 
 The `gi` is a flag that makes the regular expression case insensitive.
+
+**Now we need to count the number of consonants.**
+
+```javascript
+let sentence = prompt("Enter a sentence.");
+
+let words = sentence.split(" ");
+
+let characters = sentence.length;
+
+let vowels = sentence.match(/[aeiou]/gi).length;
+
+let consonants = sentence.match(/[^aeiou\s]/gi).length;
+```
+
+The `/[^aeiou\s]/gi` is a regular expression that matches all the consonants in the string.
+
+It is read by the computer as:
+
+      1. `^` means not.
+      2. `aeiou` means all the vowels.
+      3. `\s` means a space.
+      4. `gi` means case insensitive.
+
+The `\s` means to count the space as a consonant.  
+
+
+Now we will combine the above into a function.
+
+```javascript
+function wordChecker(sentence) {
+  let words = sentence.split(" ");
+
+  let characters = sentence.length;
+
+  let vowels = sentence.match(/[aeiou]/gi).length;
+
+  let consonants = sentence.match(/[^aeiou\s]/gi).length;
+
+  return `Words: ${words.length}\nCharacters: ${characters}\nVowels: ${vowels}\nConsonants: ${consonants}`;
+}
+```
+
+The return above is a template literal. It is a way to insert variables into a string.
+
+The `\n` between the variables is a new line. 
+
+So an output would read like:
+
+```
+Words: 2
+Characters: 11
+Vowels: 3
+Consonants: 8
+```
 
 ## Conclusion
 
