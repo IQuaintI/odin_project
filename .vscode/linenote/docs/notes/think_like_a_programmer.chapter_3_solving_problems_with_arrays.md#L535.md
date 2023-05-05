@@ -1,0 +1,1 @@
+The ellipsis (`...`) is the spread operator which spreads the array into individual elements.
