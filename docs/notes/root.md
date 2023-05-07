@@ -5,6 +5,9 @@ desc: ''
 updated: 1679688518523
 created: 1679584016580
 ---
+
+**"When you can write programs that grab blocks of memory on the fly, link them into useful structures, and clean up everything at the end so there is no residue, your're not just someone who can do a little coding -- you're a programmer."**
+
 # Odin Project Notes
 
 This is a collection of notes in regards to the Odin Project
