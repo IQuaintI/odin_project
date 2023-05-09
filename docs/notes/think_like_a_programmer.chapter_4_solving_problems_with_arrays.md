@@ -150,7 +150,7 @@ The heap is used for ***dynamic*** memory allocation.
 
 To explain it in a more visual way:
 
-![stack](https://courses.engr.illinois.edu/cs225/fa2022/assets/notes/stack_heap_memory/memory_layout.png)
+![Heaps and Stacks](../images/memory_layout.png)
 
 This image might seem hard to process and it is but we can suffer through it together.
 
@@ -253,3 +253,115 @@ This is known as a **dangling reference**.
 Once the variable is de-allocated, the memory is no longer accessible, so if you tried to de-allocate the memory again via the other variable, you would get the dreaded **double free**.
 
 
+## Some pointer problems
+
+A few variable-length manipulations that can be done. 
+
+`append` is the process of adding a new element to the end of an array.
+
+It looks like such:
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+arr.push(6);
+console.log(arr); // [1, 2, 3, 4, 5, 6]
+```
+
+`concat` is the process of adding two arrays together.
+
+It looks like such:
+
+```javascript
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let arr3 = arr1.concat(arr2);
+console.log(arr3); // [1, 2, 3, 4, 5, 6]
+```
+
+The difference between `append` and `concat` is that `append` adds elements to the end of the array while `concat` adds the elements to the end of the array and creates a new array.
+
+`charAt` is the process of getting the character at a certain index in a string.
+
+It looks like such:
+
+```javascript
+let str = "Hello World";
+console.log(str.charAt(0)); // H
+```
+
+*Note: Remember that the first character in a string is at index 0.*
+
+One of the things that an array does best is random access. 
+
+An end of line character is a character that is used to signify the end of a line.
+
+We can use the number `0` to signify the end of a string as this is standard in C++.
+
+We can also use the end of line character `\0` to signify the end of a string.
+
+An example of this is:
+
+```c++
+char str[] = "Hello World";
+```
+
+The above code is the same as:
+
+```c++
+char str[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '\0'};
+```
+
+The `[]` is used to signify that the string is an array. 
+
+The end of line character is used to signify the end of the string so that the computer knows when to stop reading the string.
+
+It is not necessary to use the end of line character, but it is good practice to do so.
+
+**Warning: The character used to end the string cannot be included in the string except for the end of line character.**
+
+## Special cases
+
+*Special cases* are situations in which valid data will cause the normal flow of code to produce an error.
+
+This is not the same as bad data, such as a string being passed into a function that only accepts integers or a number that is out-of-range. 
+
+*Robustness* is the ability of a system to handle special cases. 
+
+One way that a program can be robust is by displaying an error message when a special case occurs.
+
+The most common special case is when a user enters bad data.
+
+*Helper functions* are functions that are used to help other functions such as the `length` function in JavaScript. 
+
+*Helper functions* are useful because they allow you to write less code and make your code more readable by making it more modular.
+
+If pointers have the same values then they can be called `cross-linked`.
+
+Warning: Be careful about cross-linking pointers because it can lead to having a dangling reference.
+
+## Contiguous memory vs. non-contiguous memory
+
+*Contiguous memory* is memory that is stored in a single block.
+
+*Non-contiguous memory* is memory that is stored in multiple blocks.
+
+This is important because contiguous memory is faster to access than non-contiguous memory, but the problem with contiguous memory is that it is harder to allocate due to having to find a large enough block of memory.
+
+![Array memory](./../images/Arrays-1.png)
+
+By contrast a linked list is non-contiguous memory and look as such:
+
+![Linked list memory](./../images/LLdrawio.png)
+
+As you can see the linked list is not stored in a single block of memory.
+
+It is a connected list of nodes that are stored in different blocks of memory.
+
+## Linked lists
+
+Linked lists are similar to arrays, but they are more flexible.
+
+Linked lists have some distinct advantages over arrays: 
+
+    - It's easier to store data of different sizes in a linked list than in an array. This is because arrays are stored in contiguous memory locations, so all elements in an array must be the same size. Linked lists, on the other hand, are stored in non-contiguous memory locations, so the elements in a linked list can be different sizes.
+    - 
