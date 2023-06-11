@@ -1,0 +1,1 @@
+A **client** is code that uses an object.

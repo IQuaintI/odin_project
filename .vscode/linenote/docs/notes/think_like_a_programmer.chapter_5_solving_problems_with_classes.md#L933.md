@@ -1,0 +1,1 @@
+The `split()` method takes a string into an ordered list of substrings by searching for the pattern, puts these substrings in an array and then returns the array.
